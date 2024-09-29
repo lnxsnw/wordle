@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>A Wordle Clone</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<!-- SOURCE CODE IS https://codepen.io/jcchurch/pen/GRMaQQo -->
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <div id="letters">
+    <div class="regularcontrast letter" id="c0">{{ c[0] }}</div>
+    <div class="regularcontrast letter" id="c1">{{ c[1] }}</div>
+    <div class="regularcontrast letter" id="c2">{{ c[2] }}</div>
+    <div class="regularcontrast letter" id="c3">{{ c[3] }}</div>
+    <div class="regularcontrast letter" id="c4">{{ c[4] }}</div>
+    <div class="regularcontrast letter" id="c5">{{ c[5] }}</div>
+    <div class="regularcontrast letter" id="c6">{{ c[6] }}</div>
+    <div class="regularcontrast letter" id="c7">{{ c[7] }}</div>
+    <div class="regularcontrast letter" id="c8">{{ c[8] }}</div>
+    <div class="regularcontrast letter" id="c9">{{ c[9] }}</div>
+    <div class="regularcontrast letter" id="c10">{{ c[10] }}</div>
+    <div class="regularcontrast letter" id="c11">{{ c[11] }}</div>
+    <div class="regularcontrast letter" id="c12">{{ c[12] }}</div>
+    <div class="regularcontrast letter" id="c13">{{ c[13] }}</div>
+    <div class="regularcontrast letter" id="c14">{{ c[14] }}</div>
+    <div class="regularcontrast letter" id="c15">{{ c[15] }}</div>
+    <div class="regularcontrast letter" id="c16">{{ c[16] }}</div>
+    <div class="regularcontrast letter" id="c17">{{ c[17] }}</div>
+    <div class="regularcontrast letter" id="c18">{{ c[18] }}</div>
+    <div class="regularcontrast letter" id="c19">{{ c[19] }}</div>
+    <div class="regularcontrast letter" id="c20">{{ c[20] }}</div>
+    <div class="regularcontrast letter" id="c21">{{ c[21] }}</div>
+    <div class="regularcontrast letter" id="c22">{{ c[22] }}</div>
+    <div class="regularcontrast letter" id="c23">{{ c[23] }}</div>
+    <div class="regularcontrast letter" id="c24">{{ c[24] }}</div>
+    <div class="regularcontrast letter" id="c25">{{ c[25] }}</div>
+    <div class="regularcontrast letter" id="c26">{{ c[26] }}</div>
+    <div class="regularcontrast letter" id="c27">{{ c[27] }}</div>
+    <div class="regularcontrast letter" id="c28">{{ c[28] }}</div>
+    <div class="regularcontrast letter" id="c29">{{ c[29] }}</div>
+  </div>
+  <div id="message">{{ message }}</div>
+  <button v-if="showNextButton" @click="startNextWord">Next Word</button>
+  <br />
+  <br />
+  <div id="keyboard-row1">
+    <button type="button" class="regularcontrast button" id="q" @click="enter('q')">Q</button>
+    <button type="button" class="regularcontrast button" id="w" @click="enter('w')">W</button>
+    <button type="button" class="regularcontrast button" id="e" @click="enter('e')">E</button>
+    <button type="button" class="regularcontrast button" id="r" @click="enter('r')">R</button>
+    <button type="button" class="regularcontrast button" id="t" @click="enter('t')">T</button>
+    <button type="button" class="regularcontrast button" id="y" @click="enter('y')">Y</button>
+    <button type="button" class="regularcontrast button" id="u" @click="enter('u')">U</button>
+    <button type="button" class="regularcontrast button" id="i" @click="enter('i')">I</button>
+    <button type="button" class="regularcontrast button" id="o" @click="enter('o')">O</button>
+    <button type="button" class="regularcontrast button" id="p" @click="enter('p')">P</button>
+  </div>
+  <div id="keyboard-row2">
+    <button type="button" class="regularcontrast button" id="a" @click="enter('a')">A</button>
+    <button type="button" class="regularcontrast button" id="s" @click="enter('s')">S</button>
+    <button type="button" class="regularcontrast button" id="d" @click="enter('d')">D</button>
+    <button type="button" class="regularcontrast button" id="f" @click="enter('f')">F</button>
+    <button type="button" class="regularcontrast button" id="g" @click="enter('g')">G</button>
+    <button type="button" class="regularcontrast button" id="h" @click="enter('h')">H</button>
+    <button type="button" class="regularcontrast button" id="j" @click="enter('j')">J</button>
+    <button type="button" class="regularcontrast button" id="k" @click="enter('k')">K</button>
+    <button type="button" class="regularcontrast button" id="l" @click="enter('l')">L</button>
+  </div>
+  <div id="keyboard-row3">
+    <button type="button" class="regularcontrast button" id="enter" @click="enter('Enter')">Enter</button>
+    <button type="button" class="regularcontrast button" id="z" @click="enter('z')">Z</button>
+    <button type="button" class="regularcontrast button" id="x" @click="enter('x')">X</button>
+    <button type="button" class="regularcontrast button" id="c" @click="enter('c')">C</button>
+    <button type="button" class="regularcontrast button" id="v" @click="enter('v')">V</button>
+    <button type="button" class="regularcontrast button" id="b" @click="enter('b')">B</button>
+    <button type="button" class="regularcontrast button" id="n" @click="enter('n')">N</button>
+    <button type="button" class="regularcontrast button" id="m" @click="enter('m')">M</button>
+    <button type="button" class="regularcontrast button" id="Backspace" @click="enter('Backspace')">Bksp</button>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
