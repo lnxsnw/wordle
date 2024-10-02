@@ -4695,10 +4695,11 @@ Vue.createApp({
 
       if (key == "Enter" && this.c.length % WORD_SIZE == 0) {
         this.processGuess();
-        if (this.stopper == WORD_SIZE * 6) {
+        if (this.stopper == WORD_SIZE * 6) { // this one if failed to guess in 6 tries
           this.message = this.secret.toUpperCase();
           this.allowentry = false;
           this.showNextButton = true;
+          selectedIndex = (selectedIndex + 1) % SELECTED_WORDS.length;
         }
       }
 
