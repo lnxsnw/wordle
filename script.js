@@ -1,6 +1,6 @@
 const WORD_SIZE = 5;
 const SELECTED_WORDS = [
-  "trust", "skill", "norms", "teams", "goals", "group",
+  "coach", "plans", "study", "trust", "skill", "norms", "teams", "goals", "group",
 ]; // Add selected words here, they're picked in order. Restarts the order when refershed.
 const ALL_WORDS = [
   "abaci",
@@ -4698,6 +4698,7 @@ Vue.createApp({
         if (this.stopper == WORD_SIZE * 6) {
           this.message = this.secret.toUpperCase();
           this.allowentry = false;
+          this.showNextButton = true;
         }
       }
 
